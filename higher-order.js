@@ -21,16 +21,15 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
-
-
+let evenNumbers = mixedNumbers.filter((e,i,arr) => {
+  return e % 2 === 0 
+})
 
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
 const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 // Do not edit the code above.
-
 /*
   Use the map method on the prices array to calculate a new array of post-tax prices.
   Use a 7% tax rate.
@@ -42,9 +41,11 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
   function(element, index, wholeArray){}  Function Form
   (element, index, wholeArray)=>{}    Arrow Form
 */
-
 //Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
+const tax = 1.07;
+let postTaxPrices = prices.map((e,i,arr) => { 
+  e * tax
+})
 
 
 
@@ -63,7 +64,14 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce((acc, curr, i, arr) => {
+  console.log('Acc', acc)
+  console.log("Curr: ", curr)
+  console.log( "---------")
+
+  return acc += curr;
+
+},0)
 
 
 
