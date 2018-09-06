@@ -55,6 +55,9 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation (obj){
+  
+}
 
 
 ////////// PROBLEM 4 //////////
